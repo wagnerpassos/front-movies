@@ -11,10 +11,15 @@ export const Container = styled.header`
 
     border-bottom: 1px solid ${({theme}) => theme.COLORS.GRAY_300};
 
-    padding: 0 123px;
+    padding: 0 100px;
+
+    > a h1 {
+        color: ${({theme}) => theme.COLORS.WHITE};
+    }
 `;
 
 export const Profile = styled.div`
+   
     display: flex;
     align-items: center;
     gap: 10px;
@@ -30,7 +35,7 @@ export const Profile = styled.div`
         }
     }
 
-    > img {
+    > a img {
         height: 40px;
         width: 40px;
         border-radius: 50%;

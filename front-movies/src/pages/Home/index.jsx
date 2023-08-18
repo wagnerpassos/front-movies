@@ -1,8 +1,9 @@
-
+import { FiPlus } from "react-icons/fi";
 import { Card } from "../../components/Card";
-import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
-import { Container, Content, Cards } from "./styles";
+import { Link } from "react-router-dom";
+import { Container, Content, Cards, FixedButton } from "./styles";
+
 
 export function Home() {
   return (
@@ -11,7 +12,13 @@ export function Home() {
         <Content>
             <div>
                 <h1>Meus Filmes</h1>
-                <Button title="Adicionar filme"/>
+                <Link to="new">
+                    <FixedButton>
+                        <FiPlus size={16}/>
+                        Adicionar Filme
+                    </FixedButton>
+                </Link>
+                
             </div>
             <Cards>
                 <Card title="Interestelar"/>
