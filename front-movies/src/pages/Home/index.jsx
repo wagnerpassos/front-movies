@@ -21,9 +21,9 @@ export function Home() {
                 
             </div>
             <Cards>
-                <Card title="Interestelar"/>
-                <Card title="Interestelar"/>
-                <Card title="Interestelar"/>
+                <Link to="/preview"><Card title="Interestelar"/></Link>
+                <Link to="/preview"><Card title="Interestelar"/></Link>
+                <Link to="/preview"><Card title="Interestelar"/></Link>
             </Cards>
         </Content>
         

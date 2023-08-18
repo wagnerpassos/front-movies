@@ -44,5 +44,9 @@ export const Cards = styled.div`
     gap: 24px;
     max-height: 500px;
     overflow-y: auto;
+
+    > a {
+       color: ${({theme}) => theme.COLORS.WHITE};
+    }
 `;
 

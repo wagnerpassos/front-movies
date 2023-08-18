@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 
-export function Button({title}) {
+export function Button({title, blacked = false}) {
     return (
-        <Container>
+        <Container blacked={blacked}>
             {title}
         </Container>
     );
