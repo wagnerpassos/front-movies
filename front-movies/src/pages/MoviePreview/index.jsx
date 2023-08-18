@@ -1,14 +1,20 @@
-import { Header } from "../../components/Header";
-import { StarRank } from "../../components/StarRank";
-import { Container, Content, TextBox, TagWrapper, PostInfo, MovieHeader } from "./styles";
 import clock from "../../assets/clock.svg";
 import { Tag } from "../../components/Tag";
+import { FiArrowLeft } from "react-icons/fi";
+import { Header } from "../../components/Header";
+import { StarRank } from "../../components/StarRank";
+import { ButtonText } from "../../components/ButtonText";
+import { Link } from "react-router-dom";
+import { Container, Content, TextBox, TagWrapper, PostInfo, MovieHeader } from "./styles";
 
 export function MoviePreview() {
     return (
         <Container>
             <Header/>
             <Content>
+                    <Link to="/">
+                        <ButtonText icon={FiArrowLeft} title={"Voltar"} isActive/>
+                    </Link>
                     <MovieHeader>
                         <h1>Interestellar</h1> 
                         <StarRank starCount={4}/>

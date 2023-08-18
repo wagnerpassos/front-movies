@@ -3,14 +3,14 @@ import { Avatar, Container, Form } from "./styles";
 import { Link } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
 
 export function Profile() {
     return (
         <Container>
             <header>
                 <Link to="/">
-                    <FiArrowLeft />
-                    <span>Voltar</span>
+                    <ButtonText icon={FiArrowLeft} title={"Voltar"} isActive/>
                 </Link>
             </header>
 

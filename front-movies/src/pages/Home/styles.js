@@ -42,7 +42,7 @@ export const Cards = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
-    max-height: 500px;
+    max-height: 520px;
     overflow-y: auto;
 
     > a {
