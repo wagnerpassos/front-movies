@@ -27,7 +27,7 @@ export function SignUp() {
             if(result.data.message)
                 throw new Error(result.data.message);
             alert("Usuário cadastrado com sucesso!");
-            navigate("/auth");
+            navigate("/");
         } catch(error) {
             alert(error.message);
         }
@@ -58,7 +58,7 @@ export function SignUp() {
                     title="Cadastrar" 
                     onClick={(e) => handleSignUp(e)}
                 />
-                <Link to="/auth">
+                <Link to="/">
                     <ButtonText title={"Voltar para o login"} isActive/>
                 </Link>
             </Form>

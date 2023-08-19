@@ -29,10 +29,6 @@ export const Profile = styled.div`
         display: flex;
         flex-direction: column;
         align-items: end;
-
-        span {
-            color: ${({theme}) => theme.COLORS.GRAY_400};
-        }
     }
 
     > a img {
@@ -40,4 +36,11 @@ export const Profile = styled.div`
         width: 40px;
         border-radius: 50%;
     }
+`;
+
+export const Logout = styled.button`
+        color: ${({theme}) => theme.COLORS.GRAY_400};
+        background: none;
+        border: none;
+        cursor: pointer;
 `;

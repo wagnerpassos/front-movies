@@ -1,12 +1,12 @@
 import { FiPlus, FiX } from "react-icons/fi";
 import { Container } from "./styles.js";
 
-export function MovieItem({ isNew = false, value, onClick, ...rest }) {
+export function MovieItem({ isNew = false, title, onClick, ...rest }) {
     return (
-        <Container isNew={isNew}>
+        <Container $isnew={isNew}>
             <input
                 type="text"
-                value={value}
+                title={title}
                 readOnly={!isNew}
                 {...rest}
             />

@@ -26,8 +26,8 @@ export function NewMovie(){
                     <TextArea placeholder="Observações"/>
                     <Section title="Marcadores">
                         <TagWrapper>
-                            <MovieItem value={"React"}/>
-                            <MovieItem isNew value={"Novo marcador"}/>
+                            <MovieItem title={"React"}/>
+                            <MovieItem isNew title={"Novo marcador"}/>
                         </TagWrapper>
                     </Section>
                     <ButtonSection>
