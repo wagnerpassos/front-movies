@@ -32,6 +32,7 @@ export function SignIn() {
                 />
                 <Input
                     placeholder="Senha"
+                    type="password"
                     icon={FiLock}
                     onChange={e => setPassword(e.target.value)}
                 />

@@ -40,13 +40,14 @@ export const FixedButton = styled.button`
 
 export const Cards = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column;;
     gap: 24px;
     max-height: 520px;
     overflow-y: auto;
 
     > a {
        color: ${({theme}) => theme.COLORS.WHITE};
+       width: 100%;
     }
 `;
 

@@ -51,6 +51,7 @@ export function SignUp() {
                 />
                 <Input
                     placeholder="Senha"
+                    type="password"
                     icon={FiLock}
                     onChange={e => setPassword(e.target.value)}
                 />

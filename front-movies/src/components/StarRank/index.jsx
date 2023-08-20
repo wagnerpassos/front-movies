@@ -4,7 +4,7 @@ import starOff from "../../assets/staroff.svg";
 
 export function StarRank({ starCount = 0 }) {
     const stars = [];
-    const max = 5;
+    const max = 10;
 
     for (let i = 0; i < starCount; i++) {
         stars.push(<img key={`${i}on`} src={starOn} alt={`Star ${i + 1}`} />);

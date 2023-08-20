@@ -13,7 +13,7 @@ function AuthProvider({ children }) {
         const user = localStorage.getItem("@rocketmovie:user");
 
         if(user && token){
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             
             setData({
                 user: JSON.parse(user),
@@ -30,7 +30,7 @@ function AuthProvider({ children }) {
             if(!user || !token){
                 throw new Error(response.data.message);
             }
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
             localStorage.setItem("@rocketmovie:user", JSON.stringify(user));
             localStorage.setItem("@rocketmovie:token", token);
@@ -48,10 +48,31 @@ function AuthProvider({ children }) {
         setData({});
     }
 
+    async function updateProfile({ user }) {
+        try{
+            const response = await api.put("/user", user);
+            console.log(user);
+            const { affectedRows } = response.data;
+            
+            if(affectedRows >= 1){
+                localStorage.setItem("@rocketmovie:user", JSON.stringify(user));
+            
+                setData({user, token: data.token});
+                alert("Perfil atualizado com sucesso!")
+                return;
+            }
+            throw new Error(response.data.message);
+
+        }catch(error){
+            alert(error.message);
+        }
+    }
+
     return (
         <AuthContext.Provider value={{
              signIn, 
-             signOut, 
+             signOut,
+             updateProfile, 
              user: data.user 
         }}>
             {children}
