@@ -36,7 +36,7 @@ export function Home() {
                     {
                         movies && movies.map((movie, index) => {
                             return (
-                                <Link key={index}to="/preview">
+                                <Link key={index} to={`/preview/${movie.id}`}>
                                     <Card 
                                         title={movie.title} 
                                         description={movie.description}

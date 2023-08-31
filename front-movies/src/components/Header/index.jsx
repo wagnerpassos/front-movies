@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
 
 export function Header() {
-    const { signOut } = useAuth();
+    const { signOut, user } = useAuth();
 
     return (   
         <Container>
@@ -15,7 +15,7 @@ export function Header() {
             <Input placeholder="Pesquisar pelo titulo"></Input>
             <Profile>
                     <div>
-                        <h2>Wagner Passos</h2>
+                        <h2>{user.name}</h2>
                         <Logout onClick={signOut}>
                             Sair
                         </Logout>

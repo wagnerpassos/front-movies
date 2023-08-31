@@ -6,7 +6,7 @@ export function MovieItem({ isNew = false, title, onClick, ...rest }) {
         <Container $isnew={isNew}>
             <input
                 type="text"
-                title={title}
+                placeholder={title}
                 readOnly={!isNew}
                 {...rest}
             />

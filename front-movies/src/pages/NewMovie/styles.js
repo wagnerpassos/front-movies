@@ -25,6 +25,7 @@ export const Form = styled.form`
 
 export const TagWrapper = styled.div`
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         background-color: black;
         padding: 16px;

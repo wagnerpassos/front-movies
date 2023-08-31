@@ -10,7 +10,7 @@ export function AppRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/new" element={<NewMovie />} />
-            <Route path="/preview" element={<MoviePreview />} />
+            <Route path="/preview/:id" element={<MoviePreview />} />
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );
